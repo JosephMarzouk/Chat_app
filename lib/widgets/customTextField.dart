@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class CustomTextFormField extends StatelessWidget {
   CustomTextFormField({super.key, this.hintText, this.onChanged,this.obscureText=false});
 
@@ -10,6 +11,7 @@ class CustomTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       obscureText: obscureText!,
+      // ignore: body_might_complete_normally_nullable
       validator: (data) {
         if(data!.isEmpty)
         {
